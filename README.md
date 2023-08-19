@@ -23,6 +23,11 @@ XUnit test cases Execuation Cmd:
 #Open a terminal in the directory where your this project is located, and run the following command to build this project: 
 
 1. dotnet test
+
+
+
+Test cases report snapshots:
+![Alt text](image.png)
  
 
 
