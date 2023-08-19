@@ -1,8 +1,8 @@
 ﻿namespace Test
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.Write(FindLongestIncreasingSubsequence("6 1 5 9 2"));
         }
@@ -13,14 +13,14 @@
             var stringArray = inputString.Split(' ');
             var integerArray = stringArray.Select(x => int.Parse(x)).ToArray();
 
-            var longestSubsequence = new List<int> { integerArray[0] };
-            var currentSubsequence = new List<int> { integerArray[0] };
+            var longestSubsequence = new List<int>();
+            var currentSubsequence = new List<int>();
 
-            for (var i = 1; i < integerArray.Length; i++)
+            foreach (var num in integerArray)
             {
-                if (integerArray[i] > integerArray[i - 1])
+                if (currentSubsequence.Count == 0 || num > currentSubsequence[currentSubsequence.Count - 1])
                 {
-                    currentSubsequence.Add(integerArray[i]);
+                    currentSubsequence.Add(num);
                 }
                 else
                 {
@@ -28,9 +28,8 @@
                     {
                         longestSubsequence = new List<int>(currentSubsequence);
                     }
-
                     currentSubsequence.Clear();
-                    currentSubsequence.Add(integerArray[i]);
+                    currentSubsequence.Add(num);
                 }
             }
 
