@@ -4,19 +4,11 @@
     {
         static void Main(string[] args)
         {
-            foreach (var number in FindLongestIncreasingSubsequence("6 1 5 9 2"))
-            {
-                Console.Write(number + " ");
-            }
-            
+            Console.Write(FindLongestIncreasingSubsequence("6 1 5 9 2"));
         }
 
-        public static List<int> FindLongestIncreasingSubsequence(string inputString)
+        public static string FindLongestIncreasingSubsequence(string inputString)
         {
-            if (string.IsNullOrEmpty(inputString))
-            {
-                return new List<int>();
-            }
 
             var stringArray = inputString.Split(' ');
             var integerArray = stringArray.Select(x => int.Parse(x)).ToArray();
@@ -42,7 +34,8 @@
                 }
             }
 
-            return currentSubsequence.Count > longestSubsequence.Count ? currentSubsequence : longestSubsequence;
+            var longestSubsequenceResult = currentSubsequence.Count > longestSubsequence.Count ? currentSubsequence : longestSubsequence;
+            return string.Join(" ", longestSubsequenceResult);
         }
     }
 }
