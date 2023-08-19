@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gGU3LCeV2qMTRaKumrx2tOa5yRimKYsbDGRJ3h9kZsz582YMohYSvzVydmiGV6FS2mbmAotJmfdy3gBpbeQDUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rkumar2\\Projects\\Codility_test_Kmart\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rkumar2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
